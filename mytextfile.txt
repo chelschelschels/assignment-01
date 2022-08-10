@@ -1,0 +1,35 @@
+pls work
+import java.util.*;
+import java.io.*;
+public class Number {
+	public static void main(String[] args)throws FileNotFoundException { //method to cound words
+		
+		Scanner input=new Scanner(new File("word.txt"));
+		while(input.hasNextLine()) {
+			String line=input.nextLine();
+			Scanner ScanLine=new Scanner(line);
+			int count=0;
+			while(ScanLine.hasNext()) {
+				String word=ScanLine.next();
+				count++;
+			}//while loop scan line ends
+			System.out.println(main1("Line has "+count+" words"));
+		}//while loop next line ends
+		public static void main1(String[] args)throws FileNotFoundException {    
+			  Scanner input=new Scanner(new File("word.txt"));  
+			  String input1 = input.nextLine();    
+		        int count = 0;       
+		        //Count the characters in the string except space    
+		        for(int i = 0; i < input1.length(); i++) 
+		        {    
+		            if(input1.charAt(i) != ' ')    
+		                count++;    
+		        }                
+		        //Displays the total number of characters in the string    
+		        System.out.println("Total number of characters in the string: " + count);    
+		    }      
+		}
+	}// method to count words ends
+	
+}
+	
